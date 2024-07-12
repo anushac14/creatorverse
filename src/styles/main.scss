@@ -1,0 +1,21 @@
+@use "@picocss/pico/scss/pico" with (
+  $semantic-root-element: "#root",
+  $enable-semantic-container: true,
+);
+
+h1 {
+  text-wrap: balance;
+  color: pink;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+}
+
