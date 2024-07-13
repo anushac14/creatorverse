@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { supabase } from '../client';
 import CreatorCard from '../components/CreatorCard';
+import '../styles/ShowCreators.scss'; 
 
 
 const ShowCreators = () => {
@@ -17,22 +18,21 @@ const ShowCreators = () => {
   }, []);
 
   return (
-    <div>
+    <div className="main">
       <h1>Content Creators</h1>
-      <ul>
-        {creators.map((creator) => (
-          // <li key={creator.id}>
-          //   <Link to={`/creator/${creator.id}`}>
-          //     {creator.name}
-          //   </Link>
-          // </li>
-          <CreatorCard
-          key={creator.id}
-          creator={creator}
-        />
-        ))}
-      </ul>
-      <Link to="/add">Add a new Creator</Link>
+        <Link to="/add" className="centered-button">
+          <button>Add Creator</button>
+        </Link>
+        <div className="grid-container" > 
+          {creators.map((creator) => (
+            <div className="card">
+            <CreatorCard
+            key={creator.id}
+            creator={creator}
+          />
+          </div>
+          ))}
+        </div>
     </div>
   );
 };

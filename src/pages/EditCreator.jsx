@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { supabase } from '../client';
+import '../styles/EditCreator.scss';
 
 const EditCreator = () => {
   const { id } = useParams();
@@ -33,12 +34,12 @@ const EditCreator = () => {
   const updateCreator = async (e) => {
     e.preventDefault();
     await supabase.from('creators').update(formData).eq('id', id); 
-    navigate('/');
+    navigate(`/creator/${id}`); // Use backticks (`) for string interpolation
   };
 
   const deleteCreator = async () => {
     await supabase.from('creators').delete().eq('id', id);
-    navigate('/');
+    navigate('/all-creators');
   };
 
   const handleChange = (e) => {
@@ -82,8 +83,10 @@ const EditCreator = () => {
         value={formData.imageURL}
         onChange={handleChange}
       />
-      <button type="submit">Update Creator</button>
-      <button type="button" onClick={deleteCreator}>Delete Creator</button>
+      <div className='button-container'>
+        <button type="submit">Update Creator</button>
+        <button type="button" className="delete-button" onClick={deleteCreator}>Delete Creator</button>
+      </div>
     </form>
   );
 };

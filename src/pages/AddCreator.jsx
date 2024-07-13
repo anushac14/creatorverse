@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '../client';
+import '@picocss/pico/css/pico.min.css';
+
 
 const AddCreator = () => {
   const navigate = useNavigate();
@@ -12,7 +14,7 @@ const AddCreator = () => {
   const addCreator = async (e) => {
     e.preventDefault();
     await supabase.from('creators').insert([{ name, url, description, imageURL }]);
-    navigate('/');
+    navigate('/all-creators');
   };
 
   return (
