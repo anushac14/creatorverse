@@ -9,6 +9,7 @@ const Main = () => {
   return (
     <div className="main-container">
       <h1>Welcome to the Creatorverse </h1>
+      
       <div className="main-buttons">
         <button onClick={() => navigate('/all-creators')}>
           View All Creators
@@ -17,7 +18,8 @@ const Main = () => {
           Add a Creator
         </button>
       </div>
-    </div>
+      </div>
+    
   );
 };
 

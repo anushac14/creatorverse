@@ -1,10 +1,15 @@
 .button-container {
     display: flex;
-    justify-content: flex-start; /* Aligns items to the start of the container (left-aligned) */
+    justify-content: center; /* Centers items horizontally */
     gap: 10px; /* Adds space between buttons */
     margin-top: 20px; /* Adds margin above the button container */
-  }
+}
 
   .delete-button {
     background-color: #dc3545; /* Red background for delete button */
+  }
+
+  .main {
+    margin: 20px;
+    padding: 20px;
   }

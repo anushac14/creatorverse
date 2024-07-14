@@ -6,7 +6,7 @@
 .grid-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+  gap: 30px;
 }
 
 h1 {
@@ -15,6 +15,6 @@ h1 {
 
 .centered-button {
   display: flex;
-  justify-content: center; /* Centers the content horizontally */
-  margin-bottom: 40px; /* Adds margin above the button */
+  justify-content: center;
+  margin-bottom: 40px;
 }

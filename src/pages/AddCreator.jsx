@@ -18,7 +18,8 @@ const AddCreator = () => {
   };
 
   return (
-    <form onSubmit={addCreator}>
+    <div className="main">
+      <form onSubmit={addCreator}>
       <h1>Add Creator</h1>
       <label>Name</label>
       <input value={name} onChange={(e) => setName(e.target.value)} required/>
@@ -30,6 +31,8 @@ const AddCreator = () => {
       <input value={imageURL} onChange={(e) => setImageURL(e.target.value)} />
       <button type="submit">Add Creator</button>
     </form>
+    </div>
+    
   );
 };
 

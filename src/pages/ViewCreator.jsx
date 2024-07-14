@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { supabase } from '../client';
-// import Card from '../components/CreatorCard';
+import '../styles/ViewCreator.scss'; 
 
 const ViewCreator = () => {
   const { id } = useParams();
@@ -19,22 +19,26 @@ const ViewCreator = () => {
   if (!creator) return <div>Loading...</div>;
 
   return (
-    <div>
+    <div className="main">
       <article>
-      <h1>Viewing {creator.name}</h1>
-        {creator.name}
-        {creator.imageURL}
-        {/* <Card
-          name={creator.name}
-          url={creator.url}
-          description={creator.description}
-          imageURL={creator.imageURL}
-        /> */}
+      <img src={creator.imageURL} alt={creator.name} className="creator-img" />
+      <h1> {creator.name}</h1>
+      <div className="section-text"> 
+        <h2>About: </h2>
+        <p> {creator.description} </p>
+        <h2> Social Media: </h2>
+        <p>  <a href="{creator.url}">{creator.url}</a> </p>
+      </div>
       </article>
-
-      <a href={`/edit/${creator.id}`}>
-        <button>Edit</button>
+        <div className="button-container">
+        <a href={`/edit/${creator.id}`}>
+        <button>Edit Creator Info</button>
       </a>
+      <a href={`/all-creators`}>
+        <button>View All Creators</button>
+      </a>
+
+        </div>
     </div>
   );
 };

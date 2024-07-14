@@ -53,41 +53,43 @@ const EditCreator = () => {
   if (!creator) return <div>Loading...</div>;
 
   return (
-    <form onSubmit={updateCreator}>
-      <h1>Edit Creator</h1>
-      <label>Name</label>
-      <input
-        type="text"
-        name="name"
-        value={formData.name}
-        onChange={handleChange}
-      />
-      <label>URL</label>
-      <input
-        type="text"
-        name="url"
-        value={formData.url}
-        onChange={handleChange}
-      />
-      <label>Description</label>
-      <input
-        type="text"
-        name="description"
-        value={formData.description}
-        onChange={handleChange}
-      />
-      <label>Image URL (optional)</label>
-      <input
-        type="text"
-        name="imageURL"
-        value={formData.imageURL}
-        onChange={handleChange}
-      />
-      <div className='button-container'>
-        <button type="submit">Update Creator</button>
-        <button type="button" className="delete-button" onClick={deleteCreator}>Delete Creator</button>
-      </div>
-    </form>
+    <div className='main'> 
+      <form onSubmit={updateCreator}>
+        <h1>Edit Creator</h1>
+        <label>Name</label>
+        <input
+          type="text"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+        />
+        <label>URL</label>
+        <input
+          type="text"
+          name="url"
+          value={formData.url}
+          onChange={handleChange}
+        />
+        <label>Description</label>
+        <input
+          type="text"
+          name="description"
+          value={formData.description}
+          onChange={handleChange}
+        />
+        <label>Image URL (optional)</label>
+        <input
+          type="text"
+          name="imageURL"
+          value={formData.imageURL}
+          onChange={handleChange}
+        />
+        <div className='button-container'>
+          <button type="submit">Update Creator</button>
+          <button type="button" className="delete-button" onClick={deleteCreator}>Delete Creator</button>
+        </div>
+      </form>
+    </div>
   );
 };
 
