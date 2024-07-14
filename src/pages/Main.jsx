@@ -10,7 +10,7 @@ const Main = () => {
     <div className="main-container">
       <h1>Welcome to the Creatorverse </h1>
       
-      <div className="main-buttons">
+      <div className="main-buttons-container">
         <button onClick={() => navigate('/all-creators')}>
           View All Creators
         </button>

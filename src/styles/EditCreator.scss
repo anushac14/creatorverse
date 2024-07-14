@@ -1,12 +1,12 @@
 .button-container {
     display: flex;
-    justify-content: center; /* Centers items horizontally */
-    gap: 10px; /* Adds space between buttons */
-    margin-top: 20px; /* Adds margin above the button container */
+    justify-content: center;
+    gap: 10px; 
+    margin-top: 20px;
 }
 
   .delete-button {
-    background-color: #dc3545; /* Red background for delete button */
+    background-color: #dc3545;
   }
 
   .main {

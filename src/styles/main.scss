@@ -1,46 +1,32 @@
-// @use "@picocss/pico/scss/pico" with (
-//   $semantic-root-element: "#root",
-//   $enable-semantic-container: true,
-// );
-
-// body, html {
-//   margin: 0;
-//   padding: 0;
-// }
-
-
 .main-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     height: 100vh;
-    text-align: center;
-    background-color: #0a243f;
+    background-image: url('https://images.pexels.com/photos/3374210/pexels-photo-3374210.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); /* Adjust the path to your image */
+    background-size: cover;
   }
   
   h1 {
-    font-size: 3rem;
-    margin-bottom: 2rem;
+    font-size: 60px;
+    margin-bottom: 48px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     color:rgb(199, 200, 208);
   }
   
   button {
-    padding: 1rem 2rem;
-    font-size: 1rem;
     border: none;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     background-color: #299d7e;
     color: rgb(236, 246, 243);
-    cursor: pointer;
-    transition: background-color 0.3s;
   }
 
-  .main-container {
-    background-image: url('https://images.pexels.com/photos/3374210/pexels-photo-3374210.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); /* Adjust the path to your image */
-    background-size: cover;
-    background-position: center;
+  .main-buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
   }
+
+
   
   

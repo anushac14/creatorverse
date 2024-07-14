@@ -10,11 +10,11 @@ const CreatorCard = ({ creator }) => {
         <img src={creator.imageURL} alt={creator.name} className="card-image" />
       </Link>
     </div>
-  
+
     <div className="card-body">
       <h1 className="card-title">{creator.name}</h1>
       <p className="card-text">{creator.description}</p>
-      <a href={creator.url} className="external-link" target="_blank" rel="noopener noreferrer">
+      <a href={creator.url} target="_blank" rel="noopener noreferrer">
         <button className="external-button">Explore {creator.name}'s content</button>
       </a>
     </div>
