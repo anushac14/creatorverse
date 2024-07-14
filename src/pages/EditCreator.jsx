@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate , Link} from 'react-router-dom';
 import { supabase } from '../client';
 import '../styles/EditCreator.scss';
 
@@ -7,7 +7,7 @@ const EditCreator = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [creator, setCreator] = useState(null);
-  const [formData, setFormData] = useState({
+  const [form, setForm] = useState({
     name: '',
     url: '',
     description: '',
@@ -19,7 +19,7 @@ const EditCreator = () => {
       const { data } = await supabase.from('creators').select('*').eq('id', id).single();
       if (data) {
         setCreator(data);
-        setFormData({
+        setForm({
           name: data.name,
           url: data.url,
           description: data.description,
@@ -33,8 +33,8 @@ const EditCreator = () => {
 
   const updateCreator = async (e) => {
     e.preventDefault();
-    await supabase.from('creators').update(formData).eq('id', id); 
-    navigate(`/creator/${id}`); // Use backticks (`) for string interpolation
+    await supabase.from('creators').update(form).eq('id', id); 
+    navigate(`/creator/${id}`);
   };
 
   const deleteCreator = async () => {
@@ -44,7 +44,7 @@ const EditCreator = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prevState => ({
+    setForm(prevState => ({
       ...prevState,
       [name]: value
     }));
@@ -60,28 +60,28 @@ const EditCreator = () => {
         <input
           type="text"
           name="name"
-          value={formData.name}
+          value={form.name}
           onChange={handleChange}
         />
         <label>URL</label>
         <input
           type="text"
           name="url"
-          value={formData.url}
+          value={form.url}
           onChange={handleChange}
         />
         <label>Description</label>
         <input
           type="text"
           name="description"
-          value={formData.description}
+          value={form.description}
           onChange={handleChange}
         />
         <label>Image URL (optional)</label>
         <input
           type="text"
           name="imageURL"
-          value={formData.imageURL}
+          value={form.imageURL}
           onChange={handleChange}
         />
         <div className='button-container'>
