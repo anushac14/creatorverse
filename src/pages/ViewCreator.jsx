@@ -1,5 +1,5 @@
-import React, { useEffect, useState, Link } from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useParams, Link } from "react-router-dom";
 import { supabase } from "../client";
 import "../styles/ViewCreator.scss";
 
@@ -20,7 +20,9 @@ const ViewCreator = () => {
     fetchCreator();
   }, [id]);
 
-  if (!creator) return <div> No creators added </div>;
+  if (!creator) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="main">
@@ -30,21 +32,23 @@ const ViewCreator = () => {
           alt={creator.name}
           className="creator-img"
         />
-        <h1> {creator.name}</h1>
+        <h1>{creator.name}</h1>
         <div className="section-text">
           <h2>About: </h2>
-          <p> {creator.description} </p>
-          <h2> Social Media: </h2>
-          <a href="{creator.url}"> <p> {creator.url}</p></a>
+          <p>{creator.description}</p>
+          <h2>Social Media: </h2>
+          <a href={creator.url}>
+            <p>{creator.url}</p>
+          </a>
         </div>
       </article>
       <div className="button-container">
-        <a href={`/edit/${creator.id}`}>
+        <Link to={`/edit/${creator.id}`}>
           <button>Edit Creator Info</button>
-        </a>
-        <a href={`/all-creators`}>
+        </Link>
+        <Link to={`/all-creators`}>
           <button>View All Creators</button>
-        </a>
+        </Link>
       </div>
     </div>
   );

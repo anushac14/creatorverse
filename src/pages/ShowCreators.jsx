@@ -24,11 +24,15 @@ const ShowCreators = () => {
       </Link>
       
       <div className="grid-container">
-        {creators.map((creator) => (
-          <div key={creator.id}>
-            <CreatorCard creator={creator} />
-          </div>
-        ))}
+        {creators.length > 0 ? (
+          creators.map((creator) => (
+            <div key={creator.id}>
+              <CreatorCard creator={creator} />
+            </div>
+          ))
+        ) : (
+          <p>No content creators yet.</p>
+        )}
       </div>
     </div>
   );
