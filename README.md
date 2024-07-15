@@ -31,10 +31,8 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<video width="320" height="240" controls>
-  <source src="https://imgur.com/a/sbF0Who" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+![](https://github.com/anushac14/creatorverse/blob/main/Kapture%202024-07-15%20at%2003.12.28.gif)
+
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  👉🏿 Kap
