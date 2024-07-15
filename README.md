@@ -31,10 +31,13 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-👉🏿<img src='https://drive.google.com/file/d/1NFp8jKR74V6xg5zSYgDz3kVxx_b5tGIT/view?usp=sharing' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<video width="640" height="360" controls>
+  <source src="https://example.com/path/to/your/video.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  👉🏿 GIF tool here
+GIF created with ...  👉🏿 Kap
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
