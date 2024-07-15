@@ -31,10 +31,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<video width="640" height="360" controls>
-  <source src="https://drive.google.com/file/d/1NFp8jKR74V6xg5zSYgDz3kVxx_b5tGIT/view?usp=sharing" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<img src='https://imgur.com/vvYK9HI' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  👉🏿 Kap
