@@ -31,7 +31,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-👉🏿 https://imgur.com/a/sbF0Who
+👉🏿 https://imgur.com/a/R3lGdor
 
 <img src='walkthough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
