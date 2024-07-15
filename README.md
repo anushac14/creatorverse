@@ -31,7 +31,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-![](https://github.com/anushac14/creatorverse/blob/main/Kapture%202024-07-15%20at%2003.12.28.gif)
+👉🏿<img src='walkthough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
 <!-- Replace this with whatever GIF tool you used! -->
