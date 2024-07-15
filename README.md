@@ -4,7 +4,7 @@ Submitted by: Anusha Chinthamaduka
 
 About this web app: Creatorverse is an app that displays the internet's top content creators. Users can add, delete, and update information about their favorite influencers.
 
-Time spent: 3 hours
+Time spent: 4 hours
 
 ## Required Features
 
